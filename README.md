@@ -1,169 +1,107 @@
-# Assignment 1
-from docx import Document
 
-# Create a new Word document
-doc = Document()
 
-# Title
-doc.add_heading("Tour Management Node Module", level=1)
+**Tour Management Node Module**
 
-# Description
-doc.add_paragraph(
-    "This module provides functionalities to manage customers, tours, and agents. "
-    "It includes features such as adding new customers, booking tours, reviewing tours, "
-    "assigning agents, displaying specific tours, and canceling tours."
-)
+## Overview
 
-# Setup Instructions
-doc.add_heading("Setup Instructions", level=2)
-doc.add_paragraph(
-    "1. Ensure you have Node.js installed on your system.\n"
-    "2. Create a project folder and navigate to it in your terminal.\n"
-    "3. Save the module file as tourManagement.js in the project folder.\n"
-    "4. Create an app.js file (or similar) to import and test the module.\n"
-    "5. Run node app.js to execute your code."
-)
+This Node.js module is designed to manage a tour booking system. It allows users to add new customers, book tours, review tours, assign agents to tours, and cancel tours. The module also tracks the details of customers, tours, and agents.
 
-# How to Use the Module
-doc.add_heading("How to Use the Module", level=2)
-doc.add_paragraph("1. Import the Module").add_paragraph(
-    "In your app.js file, import the module:\n\n"
-    "```javascript\n"
-    "const tourManagement = require('./tourManagement');\n"
-    "```"
-)
-doc.add_paragraph("2. Call Functions").add_paragraph(
-    "You can call various functions from the module to manage tours, customers, and agents."
-)
+## Setup Instructions
 
-# Functions and Usage
-doc.add_heading("Functions and Usage", level=3)
+1. **Install Node.js**: Ensure you have Node.js installed. You can download it from [here](https://nodejs.org/).
+   
+2. **Clone the Repository**: Clone the repository or download the code files from the source.
 
-functions = [
-    {
-        "title": "Add a New Customer",
-        "description": "Adds a customer to the system.",
-        "usage": (
-            "```javascript\n"
-            "tourManagement.addCustomer({\n"
-            "    customerID: 800005,\n"
-            "    name: \"New Customer\",\n"
-            "    bookedTours: []\n"
-            "});\n"
-            "```"
-        ),
-        "parameters": (
-            "- `customerID` (Number): Unique identifier for the customer.\n"
-            "- `name` (String): Name of the customer.\n"
-            "- `bookedTours` (Array): List of tour IDs booked by the customer."
-        ),
-    },
-    {
-        "title": "Assign an Agent to a Tour",
-        "description": "Assigns an agent to manage a specific tour.",
-        "usage": (
-            "```javascript\n"
-            "tourManagement.assignAgentToTour(1001, \"A002\");\n"
-            "```"
-        ),
-        "parameters": (
-            "- `agentID` (Number): Unique ID of the agent.\n"
-            "- `tourID` (String): ID of the tour to assign."
-        ),
-    },
-    {
-        "title": "Display Tours Containing 'D'",
-        "description": "Displays all tours with names containing the letter 'D'.",
-        "usage": (
-            "```javascript\n"
-            "tourManagement.displayToursWithD();\n"
-            "```"
-        ),
-    },
-    {
-        "title": "Book a Tour for a Customer",
-        "description": "Books a tour for a customer if they have not already booked it.",
-        "usage": (
-            "```javascript\n"
-            "tourManagement.bookTour(800002, \"A004\");\n"
-            "```"
-        ),
-        "parameters": (
-            "- `customerID` (Number): ID of the customer.\n"
-            "- `tourID` (String): ID of the tour."
-        ),
-    },
-    {
-        "title": "Review a Tour",
-        "description": "Allows a customer to review a tour they’ve attended after its start date.",
-        "usage": (
-            "```javascript\n"
-            "tourManagement.reviewTour(800001, \"A001\", \"Amazing experience!\");\n"
-            "```"
-        ),
-        "parameters": (
-            "- `customerID` (Number): ID of the customer.\n"
-            "- `tourID` (String): ID of the tour.\n"
-            "- `review` (String): Customer’s review."
-        ),
-    },
-    {
-        "title": "Cancel a Tour",
-        "description": "Cancels a tour if it is more than 3 days before the start date.",
-        "usage": (
-            "```javascript\n"
-            "tourManagement.cancelTour(\"A003\");\n"
-            "```"
-        ),
-        "parameters": "- `tourID` (String): ID of the tour.",
-    },
-]
+3. **Install Dependencies**: If any dependencies are required, you can install them using the following command in your terminal or command prompt:
 
-for func in functions:
-    doc.add_heading(func["title"], level=4)
-    doc.add_paragraph(func["description"])
-    doc.add_paragraph("**Usage:**").add_paragraph(func["usage"])
-    if "parameters" in func:
-        doc.add_paragraph("**Parameters:**").add_paragraph(func["parameters"])
+    ```bash
+    npm install
+    ```
 
-# Example Usage in app.js
-doc.add_heading("Example Usage in app.js", level=3)
-doc.add_paragraph(
-    "```javascript\n"
-    "const tourManagement = require('./tourManagement');\n\n"
-    "// Add a new customer\n"
-    "tourManagement.addCustomer({\n"
-    "    customerID: 800006,\n"
-    "    name: \"Alice\",\n"
-    "    bookedTours: []\n"
-    "});\n\n"
-    "// Book a tour for a customer\n"
-    "tourManagement.bookTour(800006, \"A001\");\n\n"
-    "// Assign an agent to a tour\n"
-    "tourManagement.assignAgentToTour(1002, \"A004\");\n\n"
-    "// Display tours containing 'D'\n"
-    "tourManagement.displayToursWithD();\n\n"
-    "// Review a tour\n"
-    "tourManagement.reviewTour(800001, \"A001\", \"Wonderful experience!\");\n\n"
-    "// Cancel a tour\n"
-    "tourManagement.cancelTour(\"A003\");\n"
-    "```"
-)
+4. **Run the Module**: You can now use the module by importing it in your main application file or calling the functions directly from the terminal.
 
-# References
-doc.add_heading("References", level=2)
-doc.add_paragraph(
-    "1. [Node.js Documentation](https://nodejs.org/en/docs)\n"
-    "2. [GitHub Markdown Guide](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)\n"
-    "3. [JavaScript Date Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)"
-)
+## Functions Overview
 
-# Save the document
-file_path = "/mnt/data/Tour_Management_Module.docx"
-doc.save(file_path)
+### 1. **Add New Customer**
 
-file_path
+This function adds a new customer to the system.
 
+- **Parameters**:
+  - `newC`: Object containing customer details (ID, name, and booked tours).
+
+- **Usage**:
+  - To add a customer, you need to pass a customer object that includes the `customerID`, `name`, and an array of `bookedTours`.
+
+### 2. **Book a Tour for a Customer**
+
+This function books a tour for an existing customer.
+
+- **Parameters**:
+  - `cID`: The ID of the customer.
+  - `tID`: The ID of the tour the customer wants to book.
+
+- **Usage**:
+  - To book a tour, call this function with the customer ID and tour ID. The customer will be added to the tour's list of booked customers, and the tour's booking count will be updated.
+
+### 3. **Review a Tour**
+
+Customers who have booked a tour can review it after attending the tour.
+
+- **Parameters**:
+  - `cID`: The ID of the customer.
+  - `tID`: The ID of the tour.
+  - `review`: A string containing the review text.
+
+- **Usage**:
+  - To review a tour, call this function with the customer ID, tour ID, and the review text. Customers can only review tours they have attended.
+
+### 4. **Display All Tours with 'D' in the Name**
+
+This function lists all tours that have the letter "D" in their name.
+
+- **Usage**:
+  - Call this function to see all tours whose names contain the letter "D".
+
+### 5. **Assign an Agent to a Tour**
+
+This function assigns an agent to manage a specific tour.
+
+- **Parameters**:
+  - `agentID`: The ID of the agent.
+  - `tID`: The ID of the tour.
+
+- **Usage**:
+  - To assign an agent to a tour, call this function with the agent's ID and the tour ID. The agent will then be responsible for managing the tour.
+
+### 6. **Cancel a Tour**
+
+This function allows the cancellation of a tour that is scheduled to start in three days or less.
+
+- **Parameters**:
+  - `tID`: The ID of the tour to cancel.
+
+- **Usage**:
+  - To cancel a tour, call this function with the tour ID. The system checks if the tour is scheduled to start within the next three days and cancels it accordingly.
+
+## Example Workflow
+
+1. **Adding Customers**:
+   - Add a new customer by providing their details, including their booked tours.
+  
+2. **Booking a Tour**:
+   - Customers can book tours by specifying the tour ID they wish to join.
+  
+3. **Reviewing Tours**:
+   - After attending the tour, customers can review their experiences.
+
+4. **Assigning Agents**:
+   - Assign agents to manage specific tours to handle the logistics and customer inquiries.
+
+5. **Cancelling Tours**:
+   - If a tour is booked within three days, the system can cancel the tour as needed.
+
+
+[Download Tour Management README (Pure Word).docx](sandbox:/mnt/data/Tour_Management_README_Pure_Word.docx)
 # References
 Chatgpt is used to help me debug and fix some error. 
 doc.add_heading("References", level=2)
