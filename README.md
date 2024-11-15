@@ -88,12 +88,7 @@ This function allows the cancellation of a tour that is scheduled to start in th
 5. **Cancelling Tours**:
    - If a tour is booked within three days, the system can cancel the tour as needed.
 
-
-[Download Tour Management README (Pure Word).docx](sandbox:/mnt/data/Tour_Management_README_Pure_Word.docx)
 # References
 Chatgpt is used to help me debug and fix some error. 
 
-    1. [Node.js Documentation](https://nodejs.org/en/docs)
-    2. [GitHub Markdown Guide](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-    3. [JavaScript Date Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
