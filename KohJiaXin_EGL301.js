@@ -131,7 +131,7 @@ module.exports = {
         if (dTours.length > 0) {
             console.log("Tours containing letter 'D':");
             dTours.forEach(t => {
-                console.log(`${t.tourName} - ${t.destination}`);
+                console.log('${t.tourName} - ${t.destination}');
             });
         } else {
             console.log("No tours contain the letter 'D'.");
@@ -151,9 +151,9 @@ module.exports = {
                 t.customerIDs.push(cID);
                 t.customersBooked += 1;
                 c.bookedTours.push(tID);
-                console.log(`${c.name} has successfully booked the ${t.tourName} tour.`);
+                console.log('${c.name} has successfully booked the ${t.tourName} tour.');
             } else {
-                console.log(`${c.name} has already booked the ${t.tourName} tour.`);
+                console.log('${c.name} has already booked the ${t.tourName} tour.');
             }
         } else {
             console.log("Invalid customer ID or tour ID.");
