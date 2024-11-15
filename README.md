@@ -10,9 +10,6 @@ For some tips in formatting text in readme file, refer to https://docs.github.co
 
 from docx import Document
 
-# Create a new Word document
-doc = Document()
-
 # Title
 doc.add_heading("Tour Management Node Module", level=1)
 
