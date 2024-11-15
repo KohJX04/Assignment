@@ -6,19 +6,7 @@
 
 This Node.js module is designed to manage a tour booking system. It allows users to add new customers, book tours, review tours, assign agents to tours, and cancel tours. The module also tracks the details of customers, tours, and agents.
 
-## Setup Instructions
-
-1. **Install Node.js**: Ensure you have Node.js installed. You can download it from [here](https://nodejs.org/).
-   
-2. **Clone the Repository**: Clone the repository or download the code files from the source.
-
-3. **Install Dependencies**: If any dependencies are required, you can install them using the following command in your terminal or command prompt:
-
-    ```bash
-    npm install
-    ```
-
-4. **Run the Module**: You can now use the module by importing it in your main application file or calling the functions directly from the terminal.
+**Run the Module**: You can now use the module by importing it in your main application file or calling the functions directly from the terminal.
 
 ## Functions Overview
 
